@@ -11,7 +11,7 @@ async function handleFormSubmit(event) {
   let response;
   try {
     response = await axios.post(
-      "https://crudcrud.com/api/67d7dd6b17ac4be0a33c19ebafbc8e6c/shop",
+      "https://crudcrud.com/api/fd278a11c2be426dac44731a2cba866e/shop",
       vegDetails
     );
     console.log(response.data);
@@ -31,7 +31,7 @@ async function handleFormSubmit(event) {
 window.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await axios.get(
-      "https://crudcrud.com/api/67d7dd6b17ac4be0a33c19ebafbc8e6c/shop"
+      "https://crudcrud.com/api/fd278a11c2be426dac44731a2cba866e/shop"
     );
     for (let i = 0; i < response.data.length; i++) {
       displayUserOnScreen(response.data[i]);
@@ -120,7 +120,7 @@ async function updateVegQuantity(vegDetails) {
   console.log(vegDetails);
   try {
     const response = await axios.put(
-      `https://crudcrud.com/api/67d7dd6b17ac4be0a33c19ebafbc8e6c/shop/${vegDetails._id}`,
+      `https://crudcrud.com/api/fd278a11c2be426dac44731a2cba866e/shop/${vegDetails._id}`,
       {
         name: vegDetails.name,
         price: vegDetails.price,
@@ -137,7 +137,7 @@ async function updateVegQuantity(vegDetails) {
 async function deleteVeg(vegDetails) {
   try {
     const response = await axios.delete(
-      `https://crudcrud.com/api/67d7dd6b17ac4be0a33c19ebafbc8e6c/shop/${vegDetails._id}`
+      `https://crudcrud.com/api/fd278a11c2be426dac44731a2cba866e/shop/${vegDetails._id}`
     );
     console.log(response);
   } catch (error) {
